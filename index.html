@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Κωνσταντίνος Φραγκάκης | Επαφή</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
+    .card { max-width: 500px; margin: auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .photo { width: 100%; border-radius: 12px; }
+    .lang-toggle { text-align: center; margin-bottom: 20px; }
+    .lang-toggle button { margin: 0 10px; padding: 6px 12px; border: none; border-radius: 6px; background: #007BFF; color: white; cursor: pointer; }
+    .lang-toggle button:hover { background: #0056b3; }
+    .section { display: none; }
+    .visible { display: block; }
+    h2 { margin-top: 0; }
+    a.button { display: inline-block; margin: 10px 5px 0 0; padding: 10px 15px; background: #28a745; color: white; text-decoration: none; border-radius: 6px; }
+    a.button:hover { background: #218838; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://i.imgur.com/ehgdp1L.png" alt="Φωτογραφία" class="photo">
+
+    <div class="lang-toggle">
+      <button onclick="toggleLang('el')">🇬🇷 Ελληνικά</button>
+      <button onclick="toggleLang('en')">🇬🇧 English</button>
+    </div>
+
+    <div id="el" class="section visible">
+      <h2>Κωνσταντίνος Φραγκάκης</h2>
+      <p><strong>Ιδιότητα:</strong> Αξιωματικός ΕΛ.ΑΣ - Γρ. Πληροφορικής Δ.Α. Λασιθίου - Διεθνής Ένωση Αστυνομικών</p>
+      <p><strong>Τηλέφωνο:</strong> +30 697 778 8173</p>
+      <p><strong>Email:</strong> kfragkak@hotmail.com</p>
+      <p><strong>Διεύθυνση:</strong> Τζορντάνο Μπρούνο - Σταυρός, 72100 Άγιος Νικόλαος, Κρήτη</p>
+      <a class="button" href="https://drive.google.com/uc?export=download&id=19DKnaAgortzn31QdVNmUr0omyz1_d6Wm">📥 Κατέβασε Επαφή (vCard)</a>
+      <a class="button" href="https://www.facebook.com/share/1AsQ8PRiCP/?mibextid=wwXIfr">🌐 Facebook</a>
+      <a class="button" href="https://www.instagram.com/kostasfrag">📸 Instagram</a>
+    </div>
+
+    <div id="en" class="section">
+      <h2>Konstantinos Fragkakis</h2>
+      <p><strong>Title:</strong> Police Officer - International Police Association</p>
+      <p><strong>Phone:</strong> +30 697 778 8173</p>
+      <p><strong>Email:</strong> kfragkak@hotmail.com</p>
+      <p><strong>Address:</strong> Tzordano Bruno - Stavros, 72100 Agios Nikolaos, Crete, Greece</p>
+      <a class="button" href="https://drive.google.com/uc?export=download&id=19DKnaAgortzn31QdVNmUr0omyz1_d6Wm">📥 Download Contact (vCard)</a>
+      <a class="button" href="https://www.facebook.com/share/1AsQ8PRiCP/?mibextid=wwXIfr">🌐 Facebook</a>
+      <a class="button" href="https://www.instagram.com/kostasfrag">📸 Instagram</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleLang(lang) {
+      document.querySelectorAll('.section').forEach(el => el.classList.remove('visible'));
+      document.getElementById(lang).classList.add('visible');
+    }
+  </script>
+</body>
+</html>
