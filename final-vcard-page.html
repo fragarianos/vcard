@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Κατέβασε την Επαφή με Φωτογραφία</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f2f2f2; margin: 0; padding: 20px; text-align: center; }
+    .container { max-width: 500px; margin: auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .photo { width: 100%; border-radius: 12px; max-height: 400px; object-fit: cover; }
+    h1 { margin-bottom: 10px; }
+    p { margin-top: 0; color: #555; }
+    .lang-toggle { margin-bottom: 20px; }
+    .lang-toggle button { margin: 0 5px; padding: 6px 12px; border: none; border-radius: 6px; background: #007BFF; color: white; cursor: pointer; }
+    .lang-toggle button:hover { background: #0056b3; }
+    .section { display: none; }
+    .visible { display: block; }
+    a.button { display: inline-block; margin: 10px 5px 0 5px; padding: 10px 15px; background: #28a745; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; transition: background 0.3s; }
+    a.button:hover { background: #218838; }
+  </style>
+  <script>
+    function openLink(primary, fallback) {
+      window.location = primary;
+      setTimeout(function() {
+        window.location = fallback;
+      }, 1000);
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <img class="photo" src="https://i.imgur.com/ehgdp1L.png" alt="Φωτογραφία Επαφής">
+
+    <div class="lang-toggle">
+      <button onclick="toggleLang('el')">🇬🇷 Ελληνικά</button>
+      <button onclick="toggleLang('en')">🇬🇧 English</button>
+      <button onclick="toggleLang('fr')">🇫🇷 Français</button>
+      <button onclick="toggleLang('ru')">🇷🇺 Русский</button>
+    </div>
+
+    <div id="el" class="section visible">
+      <h1>Κωνσταντίνος Φραγκάκης</h1>
+      <p>Αξιωματικός ΕΛ.ΑΣ - Διεθνής Ένωση Αστυνομικών<br>Γρ. Πληροφορικής Δ.Α. Λασιθίου</p>
+      <a class="button" href="https://drive.google.com/uc?export=download&id=19DKnaAgortzn31QdVNmUr0omyz1_d6Wm">📥 Κατέβασε Επαφή με Φωτογραφία (vCard)</a>
+      <a class="button" href="#" onclick="openLink('fb://facewebmodal/f?href=https://www.facebook.com/kfragkak', 'https://www.facebook.com/kfragkak')">🌐 Facebook</a>
+      <a class="button" href="#" onclick="openLink('instagram://user?username=kostasfrag', 'https://www.instagram.com/kostasfrag')">📸 Instagram</a>
+    </div>
+
+    <div id="en" class="section">
+      <h1>Konstantinos Fragkakis</h1>
+      <p>Police Officer - International Police Association<br>IT Dept. of Lassithi Police HQ</p>
+      <a class="button" href="https://drive.google.com/uc?export=download&id=19DKnaAgortzn31QdVNmUr0omyz1_d6Wm">📥 Download Contact with Photo (vCard)</a>
+      <a class="button" href="#" onclick="openLink('fb://facewebmodal/f?href=https://www.facebook.com/kfragkak', 'https://www.facebook.com/kfragkak')">🌐 Facebook</a>
+      <a class="button" href="#" onclick="openLink('instagram://user?username=kostasfrag', 'https://www.instagram.com/kostasfrag')">📸 Instagram</a>
+    </div>
+
+    <div id="fr" class="section">
+      <h1>Konstantinos Fragkakis</h1>
+      <p>Officier de Police - Association Internationale de Police<br>Département Informatique, Police de Lassithi</p>
+      <a class="button" href="https://drive.google.com/uc?export=download&id=19DKnaAgortzn31QdVNmUr0omyz1_d6Wm">📥 Télécharger le contact avec photo (vCard)</a>
+      <a class="button" href="#" onclick="openLink('fb://facewebmodal/f?href=https://www.facebook.com/kfragkak', 'https://www.facebook.com/kfragkak')">🌐 Facebook</a>
+      <a class="button" href="#" onclick="openLink('instagram://user?username=kostasfrag', 'https://www.instagram.com/kostasfrag')">📸 Instagram</a>
+    </div>
+
+    <div id="ru" class="section">
+      <h1>Константинос Фрагкакис</h1>
+      <p>Офицер полиции - Международная полицейская ассоциация<br>ИТ-отдел полиции Лассити</p>
+      <a class="button" href="https://drive.google.com/uc?export=download&id=19DKnaAgortzn31QdVNmUr0omyz1_d6Wm">📥 Скачать контакт с фотографией (vCard)</a>
+      <a class="button" href="#" onclick="openLink('fb://facewebmodal/f?href=https://www.facebook.com/kfragkak', 'https://www.facebook.com/kfragkak')">🌐 Facebook</a>
+      <a class="button" href="#" onclick="openLink('instagram://user?username=kostasfrag', 'https://www.instagram.com/kostasfrag')">📸 Instagram</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleLang(lang) {
+      document.querySelectorAll('.section').forEach(el => el.classList.remove('visible'));
+      document.getElementById(lang).classList.add('visible');
+    }
+  </script>
+</body>
+</html>
